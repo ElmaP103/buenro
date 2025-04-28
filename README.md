@@ -48,13 +48,15 @@ npm install
 
 2. Create a `.env` file in the root directory with the following variables:
 ```
+PORT=3000
 MONGODB_URI=mongodb://localhost:27017/property-db
-AWS_ACCESS_KEY_ID=your_access_key
-AWS_SECRET_ACCESS_KEY=your_secret_key(optional)
-AWS_REGION=your_region(optional)
-S3_BUCKET=your_bucket_name
-S3_SOURCE1_KEY=path/to/source1.json
-S3_SOURCE2_KEY=path/to/source2.json
+AWS_REGION=eu-north-1
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+S3_BUCKET=buenro-tech-assessment-materials
+S3_SOURCE1_KEY=structured_generated_data.json
+S3_SOURCE2_KEY=large_generated_data.json
+INGESTION_CRON="0 */6 * * *"
 ```
 
 3. Start MongoDB locally or update the MONGODB_URI to point to your MongoDB instance.
